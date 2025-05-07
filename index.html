@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Clínica Médica - Agendamento de Consultas</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Clínica Saúde e Bem-Estar</h1>
+            <h2>Agendamento de Consultas</h2>
+        </header>
+
+        <main>
+            <form id="formAgendamento">
+                <div class="section">
+                    <h3>Informações Pessoais</h3>
+                    <div class="form-group">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Telefone: </label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(00)00000-0000" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Detalhes da Consulta</h3>
+                    <div class="form-group">
+                        <label for="especialidade">Especialidade:</label>
+                        <select name="especialidade" id="especialidade" required>
+                            <option value="">Selecione uma especialidade</option>
+                            <option value="clinico">Clínico Geral</option>
+                            <option value="cardio">Cardiologia</option>
+                            <option value="dermato">Dermatologia</option>
+                            <option value="ortopedia">Ortopedia</option>
+                            <option value="pediatria">Pediatria</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="data">Data da Consulta:</label>
+                        <input type="date" id="data" name="data" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="horario">Horário Disponível:</label>
+                        <select name="horario" id="horario" required disabled>
+                            <option value="">Selecione primeiro uma data</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" id="btnAgendar">Agendar Consulta</button>
+                </div>
+            </form>
+
+            <div id="resumoAgendamento" class="hidden">
+                <h3>Resumo do Agendamento</h3>
+                <div id="dadosResumo"></div>
+                <button id="btnNovoAgendamento">Fazer Novo Agendamento</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Clínica Saúde e Bem-estar. Todos os direitos reservados.</p>
+            <p>Desenvolvido por <span>Adriel Donegá</span></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
